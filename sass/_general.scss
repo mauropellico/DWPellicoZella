@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    list-style: none;
+    img{
+        width:300px;
+        height:200px;
+    }
+}
+
+/* BREAKPOINT MOBILE */
+
+@media (min-width:360px) {
+    a {
+        color: $color-terciario;
+        text-decoration: none;
+    }
+
+    header {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        display: inline-block;
+        .titulo-header{
+            p {
+                font-size:22.5px;
+            }
+        }
+    }
+
+    body {
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header {
+        color: black;
+        background-color: $color-principal;
+        padding: 0.5em;
+        border-bottom: 2.5px solid black;
+
+        .titulo-header {
+            margin: 1em 0em 1em 0em;
+        }
+
+        .barra-nav {
+            background-color: $color-secundario;
+            padding: 5px;
+        }
+    }
+
+    main {
+        background-color: $color-secundario;
+
+        .main-general {
+            h1 {
+                padding: 1em;
+                margin-bottom: 0.5em;
+                border-bottom: 2px solid black;
+                width: 100%;
+            }
+            .campo-general{
+                margin:0.5em;
+            }
+
+        }
+    }
+
+    footer {
+        background-color: $color-principal;
+        display: flex;
+        flex-direction: column;
+
+        .footer-titulo {
+            padding: 1em;
+        }
+
+        .footer-redes {
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0em 2em 0em 2em;
+
+                img {
+                    padding: 0em 1em 0em 1em;
+                    width:$tamano-icono;
+                    height:$tamano-icono;
+                }
+            }
+        }
+
+    }
+}
+
+/* BREAKPOINT TABLET */
+
+@media (min-width:768px) {
+    header {
+        .titulo-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            p {
+                display: flex;
+                justify-content: left;
+                margin: 1em;
+                font-size:20px;
+            }
+        }
+    }
+
+    main {
+        .main-general {
+            h1 {
+                margin-bottom: 1em;
+                padding: 0.5em;
+            }
+        }
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .footer-titulo {
+            padding: 2em;
+            display: grid;
+            place-content: center;
+        }
+
+        .footer-redes {
+            padding: 2em;
+            ul{
+                display: flex;
+                place-content: center;
+                img{
+                    width:$tamano-icono*1.125;
+                    height:$tamano-icono*1.125;
+                }
+            }
+        }
+    }
+}
+
+/* BREAKPOINT DEKSTOP */
+
+@media (min-width:1024px) {
+    header {
+        .titulo-header {
+            margin:0;
+            padding:0;
+        }
+        .barra-nav{
+            padding:0;
+            margin:0;
+        }
+    }
+}

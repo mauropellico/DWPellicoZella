@@ -1,0 +1,685 @@
+/** -------------------- ESTILOS GENERALES -------------------- **/
+
+/*----- INDEX -----*/
+.info-general {
+    div {
+        padding: 1em 0em 1em 0em;
+    }
+}
+
+.lista-enfermedades {
+    padding: 1em 0em 1em 0em;
+
+    div {
+        border: 1px solid black;
+        margin: 1em 5px 1em 5px;
+        padding: 5px;
+    }
+}
+
+/*----- PLATELMINTOS ------ */
+.imagen-platelmintos {
+    margin: 10px 0px 10px 0px;
+    border-bottom: 1px solid black;
+
+    p {
+        padding: 1em;
+    }
+}
+
+.tipos-platelmintos {
+    h2 {
+        padding: 1em 0em 1em 0em;
+    }
+
+    div {
+        padding: 1em 0em 1em 0em;
+
+        p {
+            padding: 5px;
+        }
+    }
+}
+
+/*----- DICIÉMIDOS -----*/
+.imagen-diciemidos {
+    @extend .imagen-platelmintos;
+}
+
+.general-diciemidos {
+    padding: 0.5em;
+
+    .info-diciemidos {
+        padding: 1em 0em 1em 0em;
+    }
+
+    .tipos-diciemidos {
+        padding: 1em;
+
+        div {
+            padding: 1em 0em 1em 0em;
+        }
+    }
+
+    .ejemplares-diciemidos {
+        padding: 1em;
+
+        div {
+            padding: 1em 0em 1em 0em;
+        }
+
+        p {
+            margin: 5px;
+        }
+    }
+}
+
+/*----- ACANTOCÉFALOS ----*/
+.imagen-acantocefalos {
+    @extend .imagen-platelmintos;
+
+    .lista-acantocefalos {
+        p {
+            padding: 0.5em;
+        }
+    }
+}
+
+.descripcion-acantocefalos {
+    padding: 0.5em;
+
+    .tipos-morfologicos {
+        margin: 5px;
+    }
+}
+
+.interes-veterinario {
+    padding: 2em 1em 1em 1em;
+
+    h2 {
+        padding: 5px;
+    }
+
+    h3 {
+        padding: 1em 0em 0em 0em;
+    }
+
+    p {
+        margin: 1em 0em 1em 0em;
+    }
+}
+
+.img-acanto {
+    p {
+        margin: 5px;
+    }
+}
+
+/*----- NEMATODOS -----*/
+.imagen-nematodos {
+    @extend .imagen-platelmintos;
+}
+
+.descripcion-nematodos {
+    @extend .descripcion-acantocefalos;
+}
+
+.caracteristicas-nematodos {
+    padding: 1em;
+
+    p {
+        padding: 5px;
+    }
+}
+
+.tipos-nematodos {
+    padding: 1em 0em 1em 0em;
+
+    .dos-ciclos {
+        padding: 5px;
+
+        .ciclo-monoxeno {
+            padding: 1em 0em 1em 0em;
+
+            div {
+                padding-top: 2em;
+
+                p {
+                    margin: 5px;
+                }
+            }
+        }
+
+        .ciclo-heteroxeno {
+            @extend .ciclo-monoxeno;
+        }
+    }
+
+    .ciclo-autoheteroxeno {
+        padding: 1em 0em 1em 0em;
+
+        p {
+            padding: 5px;
+        }
+    }
+}
+
+/*----- NEMATOMORFOS -----*/
+.imagen-nematomorfos {
+    @extend .imagen-platelmintos;
+}
+
+.descripcion-nematomorfos {
+    @extend .descripcion-acantocefalos;
+}
+
+.desarrollo-nematomorfos {
+    padding: 1em;
+
+    P {
+        padding: 5px;
+    }
+}
+
+.tipos-nematomorfos {
+    padding: 1em 0em 1em 0em;
+
+    .clase-nectonematoida {
+        padding: 2em 0em 1em 0em;
+
+        div {
+            padding-top: 3em;
+
+            p {
+                padding: 5px;
+            }
+        }
+    }
+
+    .clase-gordioida {
+        @extend .clase-nectonematoida;
+    }
+}
+
+/*----- INSTITUCIONAL -----*/
+.imagen-microscopio {
+    padding: 1em 0em 1em 0em;
+
+    h2 {
+        padding: 1em;
+    }
+}
+
+.imagen-biblioteca {
+    @extend .imagen-microscopio;
+}
+
+/*----- CONTACTO -----*/
+.formulario-contacto {
+    padding: 1em;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            padding: 5px;
+            margin: 5px 0px 5px 0px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+    }
+}
+
+.redes-contacto {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0em 2em 0em 2em;
+
+        img {
+            width: $tamano-icono;
+            height: $tamano-icono;
+            margin: 1em;
+        }
+    }
+}
+
+
+/** -------------------- BREAKPOINT MOBILE -------------------- **/
+@media (min-width:360px) {
+
+    /*----- INDEX -----*/
+    .lista-enfermedades {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /*----- PLATELMINTOS -----*/
+    .imagen-platelmintos {
+        img {
+            border: 1px solid black;
+            margin: 1px;
+        }
+    }
+
+    .tipos-platelmintos {
+        margin-top: 3em;
+
+        div {
+            margin: 1em 0em 1em 0em;
+
+            h3 {
+                border-bottom: 2px solid black;
+            }
+
+            img {
+                border: 2px solid $color-principal;
+                padding: 5px;
+            }
+        }
+    }
+
+    /*----- DICIÉMIDOS -----*/
+    .imagen-diciemidos {
+        img {
+            height: 300px;
+        }
+    }
+
+    .info-diciemidos {
+        border-bottom: 1px solid black;
+    }
+
+    .tipos-diciemidos {
+        margin-top: 1em;
+
+        h2 {
+            border-bottom: 2px solid black;
+            padding-bottom: 0.5em;
+        }
+    }
+
+    .ejemplares-diciemidos {
+        img {
+            border: 2px solid $color-principal;
+            padding: 5px;
+        }
+
+    }
+
+    /*----- ACANTOCÉFALOS -----*/
+    .descripcion-acantocefalos {
+        img {
+            border: 2px solid $color-principal;
+            padding: 5px;
+        }
+    }
+
+    .interes-veterinario {
+        h2 {
+            border-bottom: 2px solid black;
+            padding-bottom: 0.5em;
+        }
+
+        img {
+            border: 2px solid $color-principal;
+        }
+    }
+
+    .img-acanto {
+        img {
+            border: 2px solid $color-principal;
+            padding: 5px;
+        }
+    }
+
+    /*----- NEMATODOS -----*/
+    .caracteristicas-nematodos {
+        h2 {
+            border-bottom: 2px solid black;
+            padding-bottom: 0.5em;
+        }
+
+        img {
+            border: 2px solid $color-principal;
+            padding: 5px;
+        }
+    }
+
+    .tipos-nematodos {
+        h2 {
+            border-bottom: 2px solid black;
+            padding-bottom: 0.5em;
+        }
+
+        img {
+            border: 2px solid $color-principal;
+            padding: 5px;
+        }
+    }
+
+    /*----- NEMATOMORFOS -----*/
+    .desarrollo-nematomorfos {
+        h2 {
+            border-bottom: 2px solid black;
+            padding-bottom: 0.5em;
+        }
+
+    }
+
+    .tipos-nematomorfos {
+        h2 {
+            border-bottom: 2px solid black;
+            padding-bottom: 0.5em;
+        }
+
+        img {
+            border: 2px solid $color-principal;
+            padding: 5px;
+        }
+    }
+}
+
+/** -------------------- BREAKPOINT TABLET -------------------- **/
+@media (min-width:768px) {
+
+    /*----- INDEX -----*/
+    .lista-enfermedades {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        div {
+            padding: 5px;
+            border: 5px solid $color-principal;
+        }
+    }
+
+    /*----- PLATELMINTOS -----*/
+    .imagen-platelmintos {
+        img {
+            border: 2px solid $color-terciario;
+            background-color: $color-principal;
+            padding: 5px;
+            width: 700px;
+            height: 600px;
+        }
+    }
+
+    .tipos-platelmintos {
+        .img-platel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    /*----- DICIÉMIDOS -----*/
+    .tipos-ciclos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        div {
+            margin: 1em;
+        }
+    }
+
+    .ejemplares-diciemidos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*----- ACANTOCÉFALOS -----*/
+    .imagen-acantocefalos {
+        img {
+            height: 300px;
+        }
+
+        .lista-acantocefalos {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    .descripcion-acantocefalos {
+        img {
+            width: 500px;
+            height: 300px;
+        }
+    }
+
+    .interes-veterinario {
+        .ciclo-macra {
+            margin: 2em 0em 2em 0em;
+
+            img {
+                width: 500px;
+                height: 300px;
+            }
+        }
+    }
+
+    .img-acanto {
+        img {
+            width: 100%;
+            height: 500px;
+        }
+    }
+
+    /*----- NEMATODOS -----*/
+    .caracteristicas-nematodos {
+        img {
+            width: 500px;
+            height: 300px;
+        }
+    }
+
+    .dos-ciclos {
+        margin: 2em 0em 2em 0em;
+
+        .ciclo-monoxeno {
+            margin: 2em 0em 2em 0em;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        h3 {
+            text-decoration: underline;
+        }
+    }
+
+    /*----- NEMATOMORFOS -----*/
+    .imagen-nematomorfos {
+        img {
+            height: 400px;
+        }
+    }
+
+    .desarrollo-nematomorfos {
+        img {
+            width: 300px;
+            height: 400px;
+        }
+    }
+
+    .tipos-nematomorfos {
+        h3 {
+            padding: 1em;
+        }
+
+        .clase-nectonematoida {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    /*----- INSTITUCIONAL -----*/
+    .imagen-microscopio {
+        img {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    }
+
+}
+
+/** -------------------- BREAKPOINT DESKTOP -------------------- **/
+@media (min-width:1024px) {
+    .info-general {
+        div {
+            margin: 2em;
+        }
+    }
+
+    .lista-enfermedades {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .tipos-platelmintos {
+        img {
+            width: 80%;
+            height: 80%;
+            transition: all 1s;
+        }
+
+        img:hover {
+            width: 95%;
+            height: 95%;
+            position: relative;
+        }
+
+        .monogenea {
+            .img-platel {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 500px;
+                    height: 300px;
+                    transition: all 1s;
+                }
+
+                img:hover {
+                    width: 50%;
+                    height: 50%;
+                    position: relative;
+                }
+
+                .diagrama-monogenea {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tipos-diciemidos {
+        img {
+            width: 80%;
+            height: 80%;
+            transition: all 1s;
+        }
+
+        img:hover {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+    }
+
+    .interes-veterinario {
+        .ciclo-macra {
+            img {
+
+                width: 50%;
+                height: 400px;
+                transition: all 1s;
+            }
+
+            img:hover {
+                width: 60%;
+                height: 60%;
+                position: relative;
+            }
+        }
+    }
+
+    .img-acanto {
+        img {
+            width: 70%;
+            transition: all 1s;
+        }
+
+        img:hover {
+            width: 80%;
+            height: 80%;
+            position: relative;
+        }
+    }
+
+
+    .tipos-nematodos {
+        img {
+            width: 80%;
+            height: 80%;
+            transition: all 1s;
+        }
+
+        img:hover {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .ciclo-autoheteroxeno {
+            img {
+                width: 800px;
+                transition: all 1s;
+            }
+
+            img:hover {
+                width: 65%;
+                height: 65%;
+                position: relative;
+            }
+        }
+    }
+
+    .tipos-nematomorfos {
+        img {
+            width: 80%;
+            height: 80%;
+            transition: all 1s;
+        }
+
+        img:hover {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+    }
+
+    .imagen-microscopio {
+        img {
+            width: 70%;
+            height: 400px;
+        }
+    }
+
+    .imagen-biblioteca {
+        img {
+            width: 85%;
+            height: 400px;
+        }
+    }
+}

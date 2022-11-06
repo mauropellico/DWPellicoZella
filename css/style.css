@@ -1,0 +1,597 @@
+@charset "UTF-8";
+/*----- COLORES -----*/
+/*----- TAMAÑOS -----*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  list-style: none;
+}
+* img {
+  width: 300px;
+  height: 200px;
+}
+
+/* BREAKPOINT MOBILE */
+@media (min-width: 360px) {
+  a {
+    color: rgb(0, 0, 95);
+    text-decoration: none;
+  }
+  header {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    display: inline-block;
+  }
+  header .titulo-header p {
+    font-size: 22.5px;
+  }
+  body {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header {
+    color: black;
+    background-color: rgb(125, 125, 150);
+    padding: 0.5em;
+    border-bottom: 2.5px solid black;
+  }
+  header .titulo-header {
+    margin: 1em 0em 1em 0em;
+  }
+  header .barra-nav {
+    background-color: rgb(235, 235, 235);
+    padding: 5px;
+  }
+  main {
+    background-color: rgb(235, 235, 235);
+  }
+  main .main-general h1 {
+    padding: 1em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid black;
+    width: 100%;
+  }
+  main .main-general .campo-general {
+    margin: 0.5em;
+  }
+  footer {
+    background-color: rgb(125, 125, 150);
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-titulo {
+    padding: 1em;
+  }
+  footer .footer-redes ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0em 2em 0em 2em;
+  }
+  footer .footer-redes ul img {
+    padding: 0em 1em 0em 1em;
+    width: 60px;
+    height: 60px;
+  }
+}
+/* BREAKPOINT TABLET */
+@media (min-width: 768px) {
+  header .titulo-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  header .titulo-header p {
+    display: flex;
+    justify-content: left;
+    margin: 1em;
+    font-size: 20px;
+  }
+  main .main-general h1 {
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .footer-titulo {
+    padding: 2em;
+    display: grid;
+    place-content: center;
+  }
+  footer .footer-redes {
+    padding: 2em;
+  }
+  footer .footer-redes ul {
+    display: flex;
+    place-content: center;
+  }
+  footer .footer-redes ul img {
+    width: 67.5px;
+    height: 67.5px;
+  }
+}
+/* BREAKPOINT DEKSTOP */
+@media (min-width: 1024px) {
+  header .titulo-header {
+    margin: 0;
+    padding: 0;
+  }
+  header .barra-nav {
+    padding: 0;
+    margin: 0;
+  }
+}
+/** -------------------- ESTILOS GENERALES -------------------- **/
+/*----- INDEX -----*/
+.info-general div {
+  padding: 1em 0em 1em 0em;
+}
+
+.lista-enfermedades {
+  padding: 1em 0em 1em 0em;
+}
+.lista-enfermedades div {
+  border: 1px solid black;
+  margin: 1em 5px 1em 5px;
+  padding: 5px;
+}
+
+/*----- PLATELMINTOS ------ */
+.imagen-platelmintos, .imagen-nematomorfos, .imagen-nematodos, .imagen-acantocefalos, .imagen-diciemidos {
+  margin: 10px 0px 10px 0px;
+  border-bottom: 1px solid black;
+}
+.imagen-platelmintos p, .imagen-nematomorfos p, .imagen-nematodos p, .imagen-acantocefalos p, .imagen-diciemidos p {
+  padding: 1em;
+}
+
+.tipos-platelmintos h2 {
+  padding: 1em 0em 1em 0em;
+}
+.tipos-platelmintos div {
+  padding: 1em 0em 1em 0em;
+}
+.tipos-platelmintos div p {
+  padding: 5px;
+}
+
+/*----- DICIÉMIDOS -----*/
+.general-diciemidos {
+  padding: 0.5em;
+}
+.general-diciemidos .info-diciemidos {
+  padding: 1em 0em 1em 0em;
+}
+.general-diciemidos .tipos-diciemidos {
+  padding: 1em;
+}
+.general-diciemidos .tipos-diciemidos div {
+  padding: 1em 0em 1em 0em;
+}
+.general-diciemidos .ejemplares-diciemidos {
+  padding: 1em;
+}
+.general-diciemidos .ejemplares-diciemidos div {
+  padding: 1em 0em 1em 0em;
+}
+.general-diciemidos .ejemplares-diciemidos p {
+  margin: 5px;
+}
+
+/*----- ACANTOCÉFALOS ----*/
+.imagen-acantocefalos .lista-acantocefalos p {
+  padding: 0.5em;
+}
+
+.descripcion-acantocefalos, .descripcion-nematomorfos, .descripcion-nematodos {
+  padding: 0.5em;
+}
+.descripcion-acantocefalos .tipos-morfologicos, .descripcion-nematomorfos .tipos-morfologicos, .descripcion-nematodos .tipos-morfologicos {
+  margin: 5px;
+}
+
+.interes-veterinario {
+  padding: 2em 1em 1em 1em;
+}
+.interes-veterinario h2 {
+  padding: 5px;
+}
+.interes-veterinario h3 {
+  padding: 1em 0em 0em 0em;
+}
+.interes-veterinario p {
+  margin: 1em 0em 1em 0em;
+}
+
+.img-acanto p {
+  margin: 5px;
+}
+
+/*----- NEMATODOS -----*/
+.caracteristicas-nematodos {
+  padding: 1em;
+}
+.caracteristicas-nematodos p {
+  padding: 5px;
+}
+
+.tipos-nematodos {
+  padding: 1em 0em 1em 0em;
+}
+.tipos-nematodos .dos-ciclos {
+  padding: 5px;
+}
+.tipos-nematodos .dos-ciclos .ciclo-monoxeno, .tipos-nematodos .dos-ciclos .ciclo-heteroxeno {
+  padding: 1em 0em 1em 0em;
+}
+.tipos-nematodos .dos-ciclos .ciclo-monoxeno div, .tipos-nematodos .dos-ciclos .ciclo-heteroxeno div {
+  padding-top: 2em;
+}
+.tipos-nematodos .dos-ciclos .ciclo-monoxeno div p, .tipos-nematodos .dos-ciclos .ciclo-heteroxeno div p {
+  margin: 5px;
+}
+.tipos-nematodos .ciclo-autoheteroxeno {
+  padding: 1em 0em 1em 0em;
+}
+.tipos-nematodos .ciclo-autoheteroxeno p {
+  padding: 5px;
+}
+
+/*----- NEMATOMORFOS -----*/
+.desarrollo-nematomorfos {
+  padding: 1em;
+}
+.desarrollo-nematomorfos P {
+  padding: 5px;
+}
+
+.tipos-nematomorfos {
+  padding: 1em 0em 1em 0em;
+}
+.tipos-nematomorfos .clase-nectonematoida, .tipos-nematomorfos .clase-gordioida {
+  padding: 2em 0em 1em 0em;
+}
+.tipos-nematomorfos .clase-nectonematoida div, .tipos-nematomorfos .clase-gordioida div {
+  padding-top: 3em;
+}
+.tipos-nematomorfos .clase-nectonematoida div p, .tipos-nematomorfos .clase-gordioida div p {
+  padding: 5px;
+}
+/*----- INSTITUCIONAL -----*/
+.imagen-microscopio, .imagen-biblioteca {
+  padding: 1em 0em 1em 0em;
+}
+.imagen-microscopio h2, .imagen-biblioteca h2 {
+  padding: 1em;
+}
+
+/*----- CONTACTO -----*/
+.formulario-contacto {
+  padding: 1em;
+}
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+}
+.formulario-contacto form input {
+  padding: 5px;
+  margin: 5px 0px 5px 0px;
+}
+.formulario-contacto form textarea {
+  width: 100%;
+  height: 200px;
+}
+
+.redes-contacto ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0em 2em 0em 2em;
+}
+.redes-contacto ul img {
+  width: 60px;
+  height: 60px;
+  margin: 1em;
+}
+
+/** -------------------- BREAKPOINT MOBILE -------------------- **/
+@media (min-width: 360px) {
+  /*----- INDEX -----*/
+  .lista-enfermedades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /*----- PLATELMINTOS -----*/
+  .imagen-platelmintos img, .imagen-diciemidos img, .imagen-acantocefalos img, .imagen-nematodos img, .imagen-nematomorfos img {
+    border: 1px solid black;
+    margin: 1px;
+  }
+  .tipos-platelmintos {
+    margin-top: 3em;
+  }
+  .tipos-platelmintos div {
+    margin: 1em 0em 1em 0em;
+  }
+  .tipos-platelmintos div h3 {
+    border-bottom: 2px solid black;
+  }
+  .tipos-platelmintos div img {
+    border: 2px solid rgb(125, 125, 150);
+    padding: 5px;
+  }
+  /*----- DICIÉMIDOS -----*/
+  .imagen-diciemidos img {
+    height: 300px;
+  }
+  .info-diciemidos {
+    border-bottom: 1px solid black;
+  }
+  .tipos-diciemidos {
+    margin-top: 1em;
+  }
+  .tipos-diciemidos h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5em;
+  }
+  .ejemplares-diciemidos img {
+    border: 2px solid rgb(125, 125, 150);
+    padding: 5px;
+  }
+  /*----- ACANTOCÉFALOS -----*/
+  .descripcion-acantocefalos img, .descripcion-nematodos img, .descripcion-nematomorfos img {
+    border: 2px solid rgb(125, 125, 150);
+    padding: 5px;
+  }
+  .interes-veterinario h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5em;
+  }
+  .interes-veterinario img {
+    border: 2px solid rgb(125, 125, 150);
+  }
+  .img-acanto img {
+    border: 2px solid rgb(125, 125, 150);
+    padding: 5px;
+  }
+  /*----- NEMATODOS -----*/
+  .caracteristicas-nematodos h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5em;
+  }
+  .caracteristicas-nematodos img {
+    border: 2px solid rgb(125, 125, 150);
+    padding: 5px;
+  }
+  .tipos-nematodos h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5em;
+  }
+  .tipos-nematodos img {
+    border: 2px solid rgb(125, 125, 150);
+    padding: 5px;
+  }
+  /*----- NEMATOMORFOS -----*/
+  .desarrollo-nematomorfos h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5em;
+  }
+  .tipos-nematomorfos h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5em;
+  }
+  .tipos-nematomorfos img {
+    border: 2px solid rgb(125, 125, 150);
+    padding: 5px;
+  }
+}
+/** -------------------- BREAKPOINT TABLET -------------------- **/
+@media (min-width: 768px) {
+  /*----- INDEX -----*/
+  .lista-enfermedades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .lista-enfermedades div {
+    padding: 5px;
+    border: 5px solid rgb(125, 125, 150);
+  }
+  /*----- PLATELMINTOS -----*/
+  .imagen-platelmintos img, .imagen-diciemidos img, .imagen-acantocefalos img, .imagen-nematodos img, .imagen-nematomorfos img {
+    border: 2px solid rgb(0, 0, 95);
+    background-color: rgb(125, 125, 150);
+    padding: 5px;
+    width: 700px;
+    height: 600px;
+  }
+  .tipos-platelmintos .img-platel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /*----- DICIÉMIDOS -----*/
+  .tipos-ciclos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .tipos-ciclos div {
+    margin: 1em;
+  }
+  .ejemplares-diciemidos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /*----- ACANTOCÉFALOS -----*/
+  .imagen-acantocefalos img {
+    height: 300px;
+  }
+  .imagen-acantocefalos .lista-acantocefalos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .descripcion-acantocefalos img, .descripcion-nematodos img, .descripcion-nematomorfos img {
+    width: 500px;
+    height: 300px;
+  }
+  .interes-veterinario .ciclo-macra {
+    margin: 2em 0em 2em 0em;
+  }
+  .interes-veterinario .ciclo-macra img {
+    width: 500px;
+    height: 300px;
+  }
+  .img-acanto img {
+    width: 100%;
+    height: 500px;
+  }
+  /*----- NEMATODOS -----*/
+  .caracteristicas-nematodos img {
+    width: 500px;
+    height: 300px;
+  }
+  .dos-ciclos {
+    margin: 2em 0em 2em 0em;
+  }
+  .dos-ciclos .ciclo-monoxeno, .tipos-nematodos .dos-ciclos .ciclo-heteroxeno {
+    margin: 2em 0em 2em 0em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .dos-ciclos h3 {
+    text-decoration: underline;
+  }
+  /*----- NEMATOMORFOS -----*/
+  .imagen-nematomorfos img {
+    height: 400px;
+  }
+  .desarrollo-nematomorfos img {
+    width: 300px;
+    height: 400px;
+  }
+  .tipos-nematomorfos h3 {
+    padding: 1em;
+  }
+  .tipos-nematomorfos .clase-nectonematoida, .tipos-nematomorfos .clase-gordioida {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /*----- INSTITUCIONAL -----*/
+  .imagen-microscopio img, .imagen-biblioteca img {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 5px;
+  }
+}
+/** -------------------- BREAKPOINT DESKTOP -------------------- **/
+@media (min-width: 1024px) {
+  .info-general div {
+    margin: 2em;
+  }
+  .lista-enfermedades {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .tipos-platelmintos img {
+    width: 80%;
+    height: 80%;
+    transition: all 1s;
+  }
+  .tipos-platelmintos img:hover {
+    width: 95%;
+    height: 95%;
+    position: relative;
+  }
+  .tipos-platelmintos .monogenea .img-platel {
+    display: flex;
+    flex-direction: column;
+  }
+  .tipos-platelmintos .monogenea .img-platel img {
+    width: 500px;
+    height: 300px;
+    transition: all 1s;
+  }
+  .tipos-platelmintos .monogenea .img-platel img:hover {
+    width: 50%;
+    height: 50%;
+    position: relative;
+  }
+  .tipos-platelmintos .monogenea .img-platel .diagrama-monogenea img {
+    height: 300px;
+  }
+  .tipos-diciemidos img {
+    width: 80%;
+    height: 80%;
+    transition: all 1s;
+  }
+  .tipos-diciemidos img:hover {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .interes-veterinario .ciclo-macra img {
+    width: 50%;
+    height: 400px;
+    transition: all 1s;
+  }
+  .interes-veterinario .ciclo-macra img:hover {
+    width: 60%;
+    height: 60%;
+    position: relative;
+  }
+  .img-acanto img {
+    width: 70%;
+    transition: all 1s;
+  }
+  .img-acanto img:hover {
+    width: 80%;
+    height: 80%;
+    position: relative;
+  }
+  .tipos-nematodos img {
+    width: 80%;
+    height: 80%;
+    transition: all 1s;
+  }
+  .tipos-nematodos img:hover {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .tipos-nematodos .ciclo-autoheteroxeno img {
+    width: 800px;
+    transition: all 1s;
+  }
+  .tipos-nematodos .ciclo-autoheteroxeno img:hover {
+    width: 65%;
+    height: 65%;
+    position: relative;
+  }
+  .tipos-nematomorfos img {
+    width: 80%;
+    height: 80%;
+    transition: all 1s;
+  }
+  .tipos-nematomorfos img:hover {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .imagen-microscopio img, .imagen-biblioteca img {
+    width: 70%;
+    height: 400px;
+  }
+  .imagen-biblioteca img {
+    width: 85%;
+    height: 400px;
+  }
+}/*# sourceMappingURL=style.css.map */
